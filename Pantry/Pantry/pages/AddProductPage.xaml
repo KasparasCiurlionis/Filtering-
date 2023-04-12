@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup
+    x:Class="Pantry.pages.AddProductPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pantry="clr-namespace:Pantry"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    Size="300,400"
+    Color="Transparent">
+    <Frame CornerRadius="20" HasShadow="True">
+        <StackLayout>
+            <Label
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="Add product"
+                TextColor="Black" />
+            <Label Text="• Product name" TextColor="Black" Padding="0,5,0,0"/>
+            <Entry
+                x:Name="ProductName"
+                Margin="3"
+                Placeholder="Enter the product"
+                TextColor="Black" />
+            <Label Text="• Product date" TextColor="Black" />
+            <DatePicker
+                x:Name="ExpiryDate"
+                Margin="3"
+                TextColor="Black" />
+            <Label Text="• Product type" TextColor="Black" />
+            <Picker
+                x:Name="TypePicker"
+                Title="Product type"/>
+            <Button
+                Margin="5"
+                BackgroundColor="#262322"
+                Clicked="BtnProductAddToList"
+                CornerRadius="20"
+                Text="Add Product"
+                TextColor="White" />
+        </StackLayout>
+    </Frame>
+</xct:Popup>
+

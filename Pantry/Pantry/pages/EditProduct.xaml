@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup
+    x:Class="Pantry.pages.EditProduct"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:Pantry.models"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    Size="300,550"
+    Color="Transparent">
+
+    <Frame CornerRadius="20" VerticalOptions="Center">
+        <StackLayout Margin="10">
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Edit your product"
+                TextColor="Black" />
+            <Label
+                Padding="0,10,0,0"
+                Text="• Product name"
+                TextColor="Black" />
+            <Entry Text="{Binding Name}" />
+            <Label Text="• Product date" TextColor="Black" />
+            <DatePicker x:Name="ExpiryDate" Date="{Binding Date}" TextColor="Black" />
+            <Label Text="• Product type" TextColor="Black" />
+            <Picker x:Name="TypePicker" Title="Product type"/>
+                <StackLayout Padding="0,20,0,0">
+                <Button
+                    Margin="2.5"
+                    BackgroundColor="#262322"
+                    Clicked="OnConfirm"
+                    CornerRadius="20"
+                    Text="Confirm"
+                    TextColor="White" />
+                <Button
+                    Margin="2.5"
+                    BackgroundColor="#262322"
+                    Clicked="OnCanceled"
+                    CornerRadius="20"
+                    Text="Cancel"
+                    TextColor="White" />
+                <Button
+                    Margin="2.5"
+                    BackgroundColor="#262322"
+                    Clicked="OnDelete"
+                    CornerRadius="20"
+                    Text="Delete"
+                    TextColor="White"
+                    VerticalOptions="End" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+
+</xct:Popup>
